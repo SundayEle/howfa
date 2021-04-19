@@ -1,0 +1,60 @@
+@import './properties';
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: $background-grey;
+  width: 100%;
+  height: 8.5%;
+  border-bottom: 1px solid $border-color-grey;
+
+  .container {
+    padding: 0.6em 0 0.9em 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .logo {
+    padding: 0 1em;
+    width: 100px;
+    height: 40px;
+    margin-top: -0.1em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .search {
+    position: absolute;
+    top: 1.8em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 25px;
+    background-color: $background-white;
+    min-width: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .searchIcon {
+      width: 21px;
+      font-size: 30px;
+      opacity: 0.4;
+      margin-left: 0;
+      cursor: pointer;
+    }
+    > input {
+      border: none;
+      font-size: 16px;
+      background-color: transparent;
+      outline: 0;
+      width: 19em;
+      height: 2em;
+    }
+  }
+}

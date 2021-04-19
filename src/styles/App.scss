@@ -1,0 +1,34 @@
+@import './properties';
+
+body {
+  background-color: $background-white;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  min-width: fit-content;
+}
+
+main {
+  width: 100%;
+  background-color: $background-white;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main .container {
+    justify-content: center !important;
+  }
+}

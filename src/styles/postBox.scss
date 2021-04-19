@@ -1,0 +1,45 @@
+@import './properties';
+
+.postbox {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  background-color: $background-grey;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  min-width: 300px;
+}
+.insidePostBox {
+  display: flex;
+  padding: 15px;
+
+  > form {
+    flex: 1;
+    display: flex;
+
+    > input {
+      outline-width: 0;
+      border: none;
+      font-size: 15px;
+      padding: 5px 20px;
+      margin: 0 10px;
+      border-radius: 999px;
+      background-color: $background-white;
+    }
+    > button {
+      display: none;
+    }
+    .postbox_icons .MuiSvgIcon-root {
+      padding: 5px;
+      color: $icon-color;
+
+      &:hover {
+        color: $primary-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

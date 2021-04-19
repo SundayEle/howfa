@@ -1,0 +1,12 @@
+@import './properties';
+
+.sidebar {
+  position: fixed;
+  top: 3.6em;
+  left: 64.3em;
+  min-width: 20em;
+  height: 100%;
+  flex: 0.3;
+  background-color: $background-grey;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

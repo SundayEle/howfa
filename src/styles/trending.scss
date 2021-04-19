@@ -1,0 +1,12 @@
+@import './properties';
+
+.trending {
+  position: absolute;
+  top: 45em;
+  right: 57.5em;
+  min-width: 20em;
+  height: 35em;
+  border-radius: 25px;
+  background-color: $background-grey;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 7px 0px;
+}
