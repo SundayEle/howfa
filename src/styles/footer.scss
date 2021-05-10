@@ -1,1 +1,34 @@
 @import './properties';
+
+.footer {
+  color: $font-color-footer;
+  font-size: 0.8em;
+  margin-top: 3em;
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0.8em 1em;
+    padding: 0;
+    list-style: none;
+
+    li {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      &::after {
+        content: '\2027';
+        margin: 0 0.35em;
+      }
+
+      &:last-child::after {
+        content: '';
+      }
+    }
+  }
+
+  .copyrights {
+    margin: -0.8em 0 0 1em;
+  }
+}

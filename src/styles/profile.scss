@@ -1,20 +1,23 @@
 @import './properties';
 
+.more {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 2px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
 .profile {
   display: flex;
   align-items: center;
   font-size: 0.9em;
-  margin-bottom: 0.85em;
 
   .textContainer {
-    display: flex;
-    flex-direction: column;
-    max-width: 180px;
-
     .accountName {
-      font-weight: 500;
-      margin-bottom: 5px;
-      margin-left: 0.15em;
+      position: relative;
+      font-weight: 700;
+      margin-left: 0.3em;
       white-space: nowrap;
 
       &:hover {
@@ -23,13 +26,23 @@
       }
     }
 
-    .caption {
-      color: $font-color-secondary;
+    // .caption {
+    //   display: flex;
+    //   flex-direction: column;
+    //   flex-wrap: wrap;
+    //   text-align: start;
+    //   color: $font-color-primary;
 
-      &.small {
-        font-size: 0.8em;
-      }
-    }
+    //   &.small {
+    //     font-size: 0.8em;
+    //   }
+    //   &.medium {
+    //     font-size: 1.2em;
+    //   }
+    //   &.big {
+    //     font-size: 3em;
+    //   }
+    // }
   }
 
   a {

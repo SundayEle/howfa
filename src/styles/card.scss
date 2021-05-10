@@ -1,14 +1,22 @@
 @import './properties';
 
+p {
+  margin-top: 0.5em;
+  margin-left: 1.8em;
+  max-width: 37em;
+  font-size: 14px;
+  // border: 2px solid red;
+}
+
 .card {
   position: relative;
-  top: 11.5em;
-  left: 27%;
+  top: 12em;
+  left: 10%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 7px 0px;
   background-color: $background-grey;
   margin-bottom: 2.5em;
   border-radius: 20px;
-  width: 45%;
+  width: 60%;
   z-index: 1;
 
   header {
@@ -19,15 +27,33 @@
 
     .profile {
       margin-bottom: 0;
+      margin-top: -0.5em;
     }
+
+    .captionContainer {
+      min-width: 28em;
+      margin-top: 8em;
+      margin-bottom: -2em;
+      margin-left: 0.6em;
+    }
+
     .cardButton {
+      position: absolute;
+      top: 4.4em;
+      left: 31.5em;
       height: 30px;
+      margin-top: -3em;
 
       .MuiSvgIcon-root {
         color: $icon-color;
+        font-size: 20px;
+        padding: 10px;
+        color: $icon-color;
 
         &:hover {
-          color: $primary-color;
+          background-color: $icon-background-color;
+          color: $font-color-primary;
+          border-radius: 50px;
           cursor: pointer;
         }
       }
@@ -47,7 +73,7 @@
     span {
       white-space: nowrap;
       font-size: 0.79em;
-      margin-right: 13.5em;
+      margin-right: auto;
       padding-top: 0em;
     }
     .timePosted {
@@ -67,9 +93,12 @@
 
     .MuiSvgIcon-root {
       color: $icon-color;
+      padding: 10px;
 
       &:hover {
-        color: $primary-color;
+        color: $font-color-primary;
+        background-color: $icon-background-color;
+        border-radius: 50px;
         cursor: pointer;
       }
     }

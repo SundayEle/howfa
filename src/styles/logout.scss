@@ -1,0 +1,33 @@
+@import './properties';
+
+.logoutbutton {
+  max-width: 1000px;
+  display: flex;
+}
+.log-out {
+  position: fixed;
+  top: 0.8em;
+  left: 16em;
+  display: flex;
+  white-space: nowrap;
+  border: none;
+  min-width: 5em;
+  margin-left: 0.5em;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: $background-grey;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 12px;
+  transition: color 100ms ease-in;
+  z-index: 2;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $background-white;
+    cursor: pointer;
+  }
+}

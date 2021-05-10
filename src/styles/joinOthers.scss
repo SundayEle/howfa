@@ -1,9 +1,9 @@
 @import './properties';
 
-.trending {
-  margin-top: 5em;
+.joinothers {
   width: 20em;
-  height: 25em;
+  height: 28em;
+  margin-top: 5em;
   border-radius: 25px;
   background-color: $background-grey;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 7px 0px;
@@ -13,8 +13,9 @@
     h2 {
       position: relative;
       top: 1em;
-      left: 4.5em;
+      left: 4em;
     }
+
     .MuiSvgIcon-root {
       position: relative;
       top: -1.5em;

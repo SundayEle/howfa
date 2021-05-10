@@ -1,12 +1,56 @@
 @import './properties';
 
 .sidebarprofile {
-  position: absolute;
-  top: 5em;
-  right: 57.5em;
-  min-width: 20em;
-  height: 35em;
+  width: 20em;
+  height: 32em;
   border-radius: 25px;
   background-color: $background-grey;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 7px 0px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid $border-color-grey;
+
+    .profile_button {
+      margin-top: -85px;
+      height: 60px;
+
+      .MuiSvgIcon-root {
+        margin-left: -18px;
+        font-size: 18px;
+        padding: 10px;
+        color: $icon-color;
+
+        &:hover {
+          background-color: $icon-background-color;
+          color: $font-color-primary;
+          border-radius: 50px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .profile {
+      display: block;
+      margin-right: 80px;
+      margin-bottom: 0;
+    }
+    .accountName {
+      position: absolute;
+      top: 0.8em;
+    }
+    .bio {
+      position: absolute;
+      top: 16.5em;
+      right: 1em;
+      border-bottom: 1px solid $border-color-grey;
+
+      p {
+        margin-right: 0.5em;
+      }
+    }
+  }
 }

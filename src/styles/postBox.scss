@@ -2,8 +2,8 @@
 
 .postbox {
   position: absolute;
-  top: 16%;
-  left: 50%;
+  top: 17%;
+  left: 53%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
@@ -33,11 +33,14 @@
       display: none;
     }
     .postbox_icons .MuiSvgIcon-root {
-      padding: 5px;
+      padding: 10px;
       color: $icon-color;
 
       &:hover {
-        color: $primary-color;
+        background-color: $icon-background-color;
+        color: $font-color-primary;
+        border-radius: 50px;
+        cursor: pointer;
         cursor: pointer;
       }
     }

@@ -1,10 +1,15 @@
 import React from 'react'
 import '../styles/trending.scss'
+import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 
 function Trending() {
  return (
   <div className='trending'>
-   <h2>Trending</h2>
+   
+   <header>
+    <h2>Trending</h2>
+     <SettingsOutlinedIcon />
+   </header>
    
   </div>
  )

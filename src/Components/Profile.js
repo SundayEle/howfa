@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/profile.scss'
 import ProfileIcon from './ProfileIcon'
 import users from '../data/users'
+
+
 
 function Profile(props) {
 
  const {
   username,
-  caption,
   urlText,
   iconSize,
-  captionSize,
   verifiedBorder,
   hideAccountName,
   image
@@ -20,6 +20,7 @@ function Profile(props) {
  ? username 
  : users[Math.floor(Math.random() * users.length)].username;
 
+ 
  return (
   <div className='profile'>
 
@@ -29,12 +30,13 @@ function Profile(props) {
    image={image}
    />
 
-   {(accountName || caption) &&!hideAccountName && (
+   {(accountName) && !hideAccountName && (
      <div className="textContainer">
       <span className='accountName'>{accountName}</span>
-      <span className={`caption ${captionSize}`}>{caption}</span>
      </div>
    )}
+
+
    <a href='/'></a>
   </div>
  )

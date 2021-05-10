@@ -1,8 +1,8 @@
 @import './properties';
 
 .verifiedBorder {
-  padding: 2px;
-  margin-right: 1em;
+  padding: 2.2px;
+  margin-right: 0.2em;
   background-color: $primary-color;
   border-radius: 50%;
 }
@@ -27,7 +27,7 @@
   }
 
   &.big {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 }

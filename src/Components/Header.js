@@ -7,19 +7,21 @@ import Badge from '@material-ui/core/Badge';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
+
 const StyledBadge = withStyles((theme) => ({
   badge: {
     backgroundColor: '#c27c22',
     color: '#c27c22',
+    marginRight:'4px',
     boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
     '&::after': {
       position: 'absolute',
-      top: 0,
+      top: '-1px',
       left: 0,
       width: '100%',
       height: '100%',
       borderRadius: '50%',
-      animation: '$ripple 1.2s infinite ease-in-out',
+      animation: '$ripple 2.5s infinite ease-in-out',
       border: '1px solid currentColor',
       content: '""',
     },
@@ -39,8 +41,10 @@ const StyledBadge = withStyles((theme) => ({
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    marginTop:'-3px',
+    marginRight:'20px',
     '& > *': {
-      margin: theme.spacing(0.1),
+      margin: theme.spacing(-0.1),
     },
   },
 }));
@@ -68,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 function Header() {
+
  return (
   <div className='header'>
    <div className="container">
@@ -76,7 +81,7 @@ function Header() {
      <img className='searchIcon' src={searchIcon} alt="search icon"/>
      <input type="text" placeholder='Search on Howfa'/>
     </div>
-    <BadgeAvatars />
+      <BadgeAvatars />
    </div>
   </div>
  )

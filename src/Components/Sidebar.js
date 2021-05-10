@@ -8,6 +8,7 @@ import PeopleAltOutlinedIcon from '@material-ui/icons/PeopleAltOutlined';
 import NearMeOutlinedIcon from '@material-ui/icons/NearMeOutlined';
 import BookmarksOutlinedIcon from '@material-ui/icons/BookmarksOutlined';
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
+import Footer from './Footer'
 
 function Sidebar() {
  return (
@@ -23,9 +24,11 @@ function Sidebar() {
 
    <SidebarOptions Icon={NearMeOutlinedIcon} text='Explore'/>
 
-   <SidebarOptions Icon={BookmarksOutlinedIcon} text='Bookmarks'/>
+   <SidebarOptions Icon={BookmarksOutlinedIcon} text='Saved'/>
 
    <SidebarOptions  Icon={MoreHorizOutlinedIcon} text='More'/>
+
+   <Footer />
   </div>
  )
 }

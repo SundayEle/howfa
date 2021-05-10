@@ -1,0 +1,232 @@
+@import './properties';
+
+.header {
+  .container {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+    button {
+      margin-left: 48em;
+      width: 150px;
+      padding: 5px;
+      height: 35px;
+      cursor: pointer;
+      background-color: $background-grey;
+      color: $font-color-primary;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      outline: none;
+      border-radius: 12px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $background-white;
+        transition: color 100ms ease-in;
+      }
+    }
+    ._svg {
+      position: relative;
+      right: 10.8em;
+    }
+  }
+
+  .createaccountContainer {
+    position: absolute;
+    left: 24.5em;
+    top: -9.5em;
+    transform: translate(-50%, 50%);
+    min-width: 27em;
+    min-height: 30em;
+    border-radius: 20px;
+    background-color: $background-grey;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    h2 {
+      position: absolute;
+      top: -0.7%;
+      left: 50%;
+      display: flex;
+      justify-content: center;
+      white-space: nowrap;
+      transform: translate(-50%, -50%);
+      font-size: 35px;
+      font-weight: 700;
+      color: $primary-color;
+    }
+    h5 {
+      position: absolute;
+      top: 6.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 600;
+      color: $primary-color;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+      margin-top: 3.8em;
+
+      .form_inputs {
+        margin-bottom: 0.8em;
+
+        p {
+          color: red;
+        }
+        .usererror {
+          position: absolute;
+          top: 9.65em;
+          left: 5.5em;
+          font-size: 13px;
+        }
+        .emailerror {
+          position: absolute;
+          top: 15.6em;
+          left: 5.5em;
+          font-size: 13px;
+        }
+
+        .passerror {
+          position: absolute;
+          top: 21.2em;
+          left: 5.5em;
+          font-size: 13px;
+        }
+
+        .passserror {
+          position: absolute;
+          top: 26.9em;
+          left: 5.5em;
+          font-size: 13px;
+        }
+      }
+
+      .form_input {
+        outline-color: $primary-color;
+        border: none;
+        font-size: 15px;
+        padding: 1em;
+        margin: 0.5em;
+        width: 21em;
+        margin-left: 3.8em;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: $background-white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      .sideInputContainer {
+        position: absolute;
+        top: 5.1em;
+        left: -4em;
+        border: none;
+        font-size: 15px;
+        padding: 1em;
+        margin: 0.5em;
+        width: 15px;
+        height: 17px;
+        margin-left: 5.8em;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: $background-grey;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      .se-sideInputContainer {
+        position: absolute;
+        top: 10.1em;
+        left: -4em;
+        border: none;
+        font-size: 15px;
+        padding: 1em;
+        margin: 0.5em;
+        width: 15px;
+        height: 17px;
+        margin-left: 5.8em;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: $background-grey;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      .th-sideInputContainer {
+        position: absolute;
+        top: 15.1em;
+        left: -4em;
+        border: none;
+        font-size: 15px;
+        padding: 1em;
+        margin: 0.5em;
+        width: 15px;
+        height: 17px;
+        margin-left: 5.8em;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: $background-grey;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      .ft-sideInputContainer {
+        position: absolute;
+        top: 20.1em;
+        left: -4em;
+        border: none;
+        font-size: 15px;
+        padding: 1em;
+        margin: 0.5em;
+        width: 15px;
+        height: 17px;
+        margin-left: 5.8em;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: $background-grey;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+
+      .password-togle-icon {
+        position: absolute;
+        top: 15.5em;
+        right: 2.5em;
+        z-index: 1000;
+        cursor: pointer;
+      }
+      .confirm-password-toogle-icon {
+        position: absolute;
+        top: 20em;
+        right: 2.5em;
+        z-index: 1000;
+        cursor: pointer;
+      }
+      button {
+        padding: 1em;
+        margin: 0.5em;
+        width: 23em;
+        height: 3em;
+        border-radius: 10px;
+        background-color: $primary-color;
+        color: $background-white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border: none;
+        outline: none;
+        font-size: 17px;
+        font-weight: 700;
+
+        &:hover {
+          background-color: #9c5d09;
+          transition: color 100ms ease-in;
+          cursor: pointer;
+        }
+      }
+    }
+    h6 {
+      position: absolute;
+      top: 39.8em;
+      left: 5.2em;
+      color: $icon-color;
+    }
+  }
+}

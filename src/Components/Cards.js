@@ -23,7 +23,6 @@ function Cards() {
 
  },
  {
-  
   user:'Simon fresh',
   text:'Niceeee!',
    id:2,
@@ -127,11 +126,11 @@ const commentsSix = [
  },
 ];
  return (
-  <div classuser='cards'>
+  <div className='cards'>
    
    <Card 
    accountName='Orlando Flex' 
-   verifiedBorder={true} 
+   verifiedBorder={false} 
    image={imagefive} 
    comments={commentsFour} 
    likedByText='Solomon' 
@@ -142,8 +141,8 @@ const commentsSix = [
 
      <Card 
    accountName='Wyclev don' 
-   verifiedBorder={false} 
-   image={imagefour} 
+   verifiedBorder={true} 
+   image={imageeight} 
    comments={commentsFive} 
    likedByText='Solomon' 
    likedByNumber={41} 
@@ -175,7 +174,7 @@ const commentsSix = [
 
      <Card 
    accountName='Learnado bean' 
-   verifiedBorder={false} 
+   verifiedBorder={true} 
    image={imagenine} 
    comments={commentsSeven} 
    likedByText='Solomon' 
@@ -186,9 +185,9 @@ const commentsSix = [
 
      <Card 
    accountName='Learnado bean' 
-   verifiedBorder={true} 
+   verifiedBorder={false} 
    image={imagethree} 
-   comments={commentsSeven} 
+   comments={commentsFour} 
    likedByText='Solomon' 
    likedByNumber={898} 
    hours={23}
@@ -209,8 +208,8 @@ const commentsSix = [
      <Card 
    accountName='Simon fresh' 
    verifiedBorder={false} 
-   image={imageone} 
-   comments={commentsOne} 
+   image={imagefour} 
+   comments={commentsSix} 
    likedByText='Solomon' 
    likedByNumber={1} 
    hours={23} 
@@ -219,7 +218,7 @@ const commentsSix = [
 
      <Card 
    accountName='Timothy cleev' 
-   verifiedBorder={false} 
+   verifiedBorder={true} 
    image={imageseven} 
    comments={commentsOne} 
    likedByText='Solomon' 
@@ -230,7 +229,7 @@ const commentsSix = [
 
      <Card 
    accountName='Titus Mira' 
-   verifiedBorder={true} 
+   verifiedBorder={false} 
    image={imagetwo} 
    comments={commentsFour} 
    likedByText='Solomon' 

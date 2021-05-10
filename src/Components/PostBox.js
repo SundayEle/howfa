@@ -5,8 +5,8 @@ import AddAPhotoOutlinedIcon from '@material-ui/icons/AddAPhotoOutlined';
 import OndemandVideoOutlinedIcon from '@material-ui/icons/OndemandVideoOutlined';
 import MusicVideoOutlinedIcon from '@material-ui/icons/MusicVideoOutlined';
 
-function PostBox() {
 
+function PostBox() {
  const handleSubmit = (e) => {
   e.preventDefault();
  }
