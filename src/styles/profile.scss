@@ -5,6 +5,7 @@
   font-weight: 600;
   padding: 2px;
   margin-top: 3px;
+  line-height: 18px;
   cursor: pointer;
 }
 
@@ -17,8 +18,10 @@
     .accountName {
       position: relative;
       font-weight: 700;
+      font-size: 15px;
       margin-left: 0.3em;
       white-space: nowrap;
+      color: #262626;
 
       &:hover {
         cursor: pointer;
@@ -26,23 +29,19 @@
       }
     }
 
-    // .caption {
-    //   display: flex;
-    //   flex-direction: column;
-    //   flex-wrap: wrap;
-    //   text-align: start;
-    //   color: $font-color-primary;
+    .cardLocation {
+      position: relative;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+      margin-left: 0;
+      white-space: nowrap;
 
-    //   &.small {
-    //     font-size: 0.8em;
-    //   }
-    //   &.medium {
-    //     font-size: 1.2em;
-    //   }
-    //   &.big {
-    //     font-size: 3em;
-    //   }
-    // }
+      .MuiSvgIcon-root {
+        font-size: 16px;
+        color: $primary-color;
+      }
+    }
   }
 
   a {

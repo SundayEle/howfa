@@ -4,7 +4,7 @@
   .container {
     display: flex;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     button {
       margin-left: 48em;
@@ -26,10 +26,6 @@
         color: $background-white;
         transition: color 100ms ease-in;
       }
-    }
-    ._svg {
-      position: relative;
-      right: 10.8em;
     }
   }
 

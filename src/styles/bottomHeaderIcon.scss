@@ -1,0 +1,22 @@
+@import './properties';
+
+.bottom_header_icon {
+  :hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
+  > .MuiSvgIcon-root {
+    font-size: 20px !important;
+    :hover {
+      cursor: pointer;
+      color: $primary-color;
+    }
+  }
+}
+.bottom_header_icon--active {
+  color: $primary-color;
+  :hover {
+    cursor: pointer;
+    color: $icon-color;
+  }
+}

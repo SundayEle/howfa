@@ -2,18 +2,11 @@ import React, {useState} from 'react'
 import '../styles/card.scss'
 import Profile from './Profile'
 import captions from '../data/captions'
-import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
-import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
-import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
-import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
+import commentss from '../data/commentss'
+import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
 import MessageOutlinedIcon from '@material-ui/icons/MessageOutlined';
 import CardMenu from './CardMenu'
 import Comment from './Comment'
-import Avatar from '@material-ui/core/Avatar';
-import AvatarGroup from '@material-ui/lab/AvatarGroup';
-import imageone from '../images/sun1.jpg'
-import imagetwo from '../images/sun2.JPG'
-import imagethree from '../images/sun3.jpg'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -21,6 +14,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,19 +34,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-  function GroupAvatars() {
-  return (
-    <AvatarGroup max={4} style={{marginRight:'8px'}}>
-      <Avatar alt="Remy Sharp" src={imageone} />
-      <Avatar alt="Travis Howard" src={imagetwo} />
-      <Avatar alt="Cindy Baker" src={imagethree} />
-    </AvatarGroup>
-  );
-}
-
-
-
 function Card(props) {
 
   const [likedByNumber,increaseLikes] = useState(0)
@@ -60,7 +41,8 @@ function Card(props) {
   const {
     cardcaption,
     hideCaption,
-    captionSize
+    captionSize,
+    cardcomment
   } = props;
 
   const classes = useStyles();
@@ -78,10 +60,12 @@ function Card(props) {
     setOpen(false)
   }
 
+
   const {
         verifiedBorder,
         image,
         comments,
+        date,
         hours,
         totalComments,
     } = props;
@@ -90,9 +74,9 @@ function Card(props) {
  ? cardcaption 
  : captions[Math.floor(Math.random() * captions.length)].cardcaption;
 
- if(caption.length) {
-   caption = caption;
- }
+    let comment = cardcomment
+ ? cardcomment 
+ : commentss[Math.floor(Math.random() * commentss.length)].cardcomment;
 
 
  function  ReadMore() {
@@ -100,7 +84,6 @@ function Card(props) {
 
   const resultString = isTruncated ? caption.slice(0, 190) : caption;
 
- 
 
   function  toggleisTruncated() {
     setisTruncated(!isTruncated);
@@ -113,13 +96,35 @@ function Card(props) {
       {isTruncated ? "... More" : " .. Less"}</span>
     </p>
   );
+  
 }
+
+function  SeeMore() {
+  const [ isOpen, setisOpen] = useState(true)
+
+  const commentString = isOpen ? comment.slice(0, 180) : comment;
+
+
+  function  toggleisOpen() {
+    setisOpen(!isOpen);
+  }
+
+  return (
+    <p>
+      {commentString}
+      <span onClick={toggleisOpen} className="more"> 
+      {isOpen ? "... More" : " .. Less"}</span>
+    </p>
+  );
+  
+}
+
 
     return (
         <div className='card'>  
         <header>
-            <Profile iconSize='medium' verifiedBorder={verifiedBorder} />
-           <div className="cardButton"><MoreVertOutlinedIcon /> </div>
+            <Profile iconSize='medium' verifiedBorder={verifiedBorder} hideLocation={false}/>
+           <div className="cardButton"><MoreHorizOutlinedIcon /> </div>
         </header>
         <div className="cation">
              {(caption) && !hideCaption && (
@@ -131,13 +136,20 @@ function Card(props) {
         <img className='cardImage' src={image} alt="card content"/>
         <CardMenu />
         <div className="likedBy">
-            <GroupAvatars />
+          <div className="groupAvatar">
+            <Profile iconSize='small' verifiedBorder={false} hideLocation={true}/>
+            <Profile iconSize='small' verifiedBorder={false} hideLocation={true}/>
+            <Profile iconSize='small' verifiedBorder={false} hideLocation={true}/>
+          </div>
             <span>
                  And <strong>  {likedByNumber} others..</strong>
             </span>
             <div className="timePosted">
-            {hours} HOURS AGO
+            {hours} hrs ago
         </div>
+         <div className="datePosted">
+                {date}
+            </div>
         </div>
 
 
@@ -178,28 +190,34 @@ function Card(props) {
     </React.Fragment>
 
       <div className="cardMenu">
-            <ThumbUpAltOutlinedIcon onClick= {() =>
+            <FontAwesomeIcon className='fontawesomeicon' icon={[ "far","thumbs-up"]} onClick= {() =>
             increaseLikes(likedByNumber + 1 ) } />
-            <ChatBubbleOutlineOutlinedIcon onClick={handleClickOpen} />
-            <ShareOutlinedIcon />
+            <FontAwesomeIcon className='fontawesomeicon' icon={["far","comment-alt"]} onClick={handleClickOpen} />
+            <FontAwesomeIcon className='fontawesomeicon' icon={["far","share-square"]} />
         </div>
 
     
            <div className="comments">
              <MessageOutlinedIcon />
-               <div className='totalcomments'>
-                <strong>{totalComments} </strong>Comments
+               <div className='totalcomments'> See all
+                <strong> {totalComments} </strong>Comments
                </div> 
             {comments.map((comment) => {
                 return (
+                  <div className='commentTextContainer'>
                   <Comment
                   key={comment.id} 
                   accountName={comment.user}
-                  comment={comment.text} 
+                  time={comment.time} 
                   />
+                  <div className="commentText">
+                  <SeeMore><span>{comment}</span></SeeMore>
+                  </div>
+                  </div>
                 );
             })
             }
+            
         </div>
         </div>
     );

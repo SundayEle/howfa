@@ -2,6 +2,21 @@
 
 .secondsidebar {
   position: sticky;
-  margin-top: -2.5em;
+  margin-top: -1.5em;
   margin-right: -3.5em;
+}
+@media only screen and (max-width: 67.5rem) {
+  .secondsidebar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 48rem) {
+  .secondsidebar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 43rem) {
+  .secondsidebar {
+    display: none;
+  }
 }

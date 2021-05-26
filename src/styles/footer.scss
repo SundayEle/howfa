@@ -2,17 +2,19 @@
 
 .footer {
   color: $font-color-footer;
-  font-size: 0.8em;
-  margin-top: 3em;
+  font-size: 0.85em;
+  margin-top: 1.6em;
 
   .links {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
-    margin: 0 0 0.8em 1em;
+    white-space: pre-wrap;
+    margin: 0 0 0.8em 1.5em;
     padding: 0;
     list-style: none;
 
     li {
+      padding: 0.1em;
       &:hover {
         text-decoration: underline;
         cursor: pointer;
@@ -30,5 +32,16 @@
 
   .copyrights {
     margin: -0.8em 0 0 1em;
+  }
+}
+@media only screen and (max-width: 48rem) {
+  .footer {
+    .links {
+      margin: 0 0 0.8em 0.6em;
+    }
+
+    .copyrights {
+      margin: -0.8em 0 0 0.6em;
+    }
   }
 }

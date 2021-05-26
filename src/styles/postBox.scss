@@ -2,7 +2,7 @@
 
 .postbox {
   position: absolute;
-  top: 17%;
+  top: 18%;
   left: 53%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -11,6 +11,8 @@
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   min-width: 300px;
+  white-space: nowrap;
+  z-index: 1;
 }
 .insidePostBox {
   display: flex;
@@ -44,5 +46,68 @@
         cursor: pointer;
       }
     }
+  }
+}
+@media only screen and (max-width: 73.5rem) {
+  .postbox {
+    top: 17%;
+    left: 38%;
+  }
+}
+
+@media only screen and (max-width: 67.5rem) {
+  .postbox {
+    top: 17%;
+    left: 38%;
+  }
+}
+@media only screen and (max-width: 64rem) {
+  .postbox {
+    top: 17%;
+    left: 38%;
+  }
+}
+@media only screen and (max-width: 48rem) {
+  .postbox {
+    left: 42%;
+  }
+}
+@media only screen and (max-width: 43rem) {
+  .postbox {
+    top: 16%;
+    left: 50%;
+    width: 15em;
+  }
+  .insidePostBox {
+    padding: 6px;
+
+    > form {
+      > input {
+        height: 30px;
+        font-size: 13px;
+        padding: 3px 3px;
+        margin: 5px 3px;
+      }
+      .postbox_icons .MuiSvgIcon-root {
+        padding: 5px;
+        margin: 8px 0 0 -1px;
+        font-size: 16px;
+        color: $icon-color;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  .postbox {
+    top: 20%;
+    left: 55%;
+    width: 15em;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .postbox {
+    top: 20%;
+    left: 65%;
+    width: 15em;
   }
 }

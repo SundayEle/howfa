@@ -2,15 +2,15 @@ import React from 'react'
 import '../styles/cards.scss'
 import Card from './Card'
 import imageone from '../images/sun1.jpg'
-import imagetwo from '../images/sun2.JPG'
+import imagetwo from '../images/sun2.jpg'
 import imagethree from '../images/sun3.jpg'
-import imagefour from '../images/sun4.JPG'
-import imagefive from '../images/sun5.JPG'
+import imagefour from '../images/sun4.jpg'
+import imagefive from '../images/sun5.jpg'
 import imagesix from '../images/sun6.jpg'
 import imageseven from '../images/sun7.jpg'
-import imageeight from '../images/sun8.JPG'
-import imagenine from '../images/sun9.JPG'
-import imageten from '../images/sun10.JPG'
+import imageeight from '../images/sun8.jpg'
+import imagenine from '../images/sun9.jpg'
+import imageten from '../images/sun10.jpg'
 
 function Cards() {
 
@@ -18,13 +18,13 @@ function Cards() {
  {
    
   user:'Timothy cleev',
-  text:"Yoo that's cool!",
+  time:'2hrs ago',
   id:1,
 
  },
  {
   user:'Simon fresh',
-  text:'Niceeee!',
+  time:'6hrs ago',
    id:2,
  },
 ];
@@ -33,14 +33,14 @@ const commentsTwo = [
  {
    
   user:'Blessing neo',
-  text:'Cutiee pie',
+  time:'1hr ago',
   id:3,
   
  },
  {
    
   user:'Isaac nice',
-  text:'I know this day would come',
+  time:'Just Now',
   id:4,
   
  },
@@ -49,13 +49,13 @@ const commentsTwo = [
  const commentsThree = [
  { 
   user:'Jasmine Itz',
-  text:'Did you see my name',
+  time:'5mins ago',
   id:5,
  },
  {
   
   user:'Veronica gwen',
-  text:'My name is blessing',
+  time:'50mins ago',
    id:6,
   
  },
@@ -65,14 +65,14 @@ const commentsTwo = [
 const commentsFour = [
  {
   user:'Orlando Flex',
-  text:'The headies is here again',
+  time:'9hrs ago',
    id:7,
   
  },
  {
    
   user:'Titus Mira',
-  text:'The king is here naw',
+  time:'25mins ago',
   id:8,
   
  },
@@ -81,13 +81,13 @@ const commentsFour = [
 const commentsFive = [
  {
   user:'Wyclev don',
-  text:'Oga the don of Lagos',
+  time:'40mins ago',
    id:9,
  },
  {
   
   user:'Vivian enoch',
-  text:'We run the city bruh',
+  time:'17hrs ago',
    id:10,
   
  },
@@ -96,14 +96,14 @@ const commentsFive = [
 const commentsSix = [
  {
   user:'Amor flez',
-  text:'Man of the year again!',
+  time:'4hrs ago',
   id:11,
   
  },
  {
    
   user:'Hero flank',
-  text:'My gee from unset',
+  time:'2mins ago',
   id:12,
   
  },
@@ -113,14 +113,15 @@ const commentsSix = [
  {
  
   user:'Learnado bean',
-  text:'Bros you fresh die',
+  text:'Bros you fresh die 🤩🙌',
+  time:' Just Now',
     id:13,
   
  },
  {
  
   user:'Joseph dub',
-  text:'Joining the host of angels',
+  time:'Just Now',
     id:14,
   
  },
@@ -130,111 +131,131 @@ const commentsSix = [
    
    <Card 
    accountName='Orlando Flex' 
+   location='London, England'
    verifiedBorder={false} 
    image={imagefive} 
    comments={commentsFour} 
    likedByText='Solomon' 
    likedByNumber={87998} 
-   hours={14}
+  hours={14}
+   date='21/04/19'
    totalComments={456} 
    />
 
      <Card 
    accountName='Wyclev don' 
+   location='Heroa, Amsterdam'
    verifiedBorder={true} 
    image={imageeight} 
    comments={commentsFive} 
    likedByText='Solomon' 
    likedByNumber={41} 
-   hours={16} 
+  hours={16}
+   date='01/12/19' 
    totalComments={7} 
    />
 
      <Card 
    accountName='Isaac nice' 
+   location='Enugu, Nigeria'
    verifiedBorder={true} 
    image={imageone} 
    comments={ commentsTwo} 
    likedByText='Solomon' 
    likedByNumber={8} 
-   hours={16} 
+   hours={16}
+   date='11/09/17' 
    totalComments={1000} 
    />
 
      <Card 
    accountName='Timothy cleev' 
+   location='Lagos, Nigeria'
    verifiedBorder={false} 
    image={imageten} 
    comments={commentsOne} 
    likedByText='Solomon' 
    likedByNumber={8000000} 
-   hours={18} 
+   hours={18}
+   date='06/05/19' 
    totalComments={900} 
    />
 
      <Card 
    accountName='Learnado bean' 
+   location='monica, Las Vegas'
    verifiedBorder={true} 
    image={imagenine} 
    comments={commentsSeven} 
    likedByText='Solomon' 
    likedByNumber={1000000} 
-   hours={67} 
+  hours={67}
+   date='12/10/20' 
    totalComments={67} 
    />
 
      <Card 
    accountName='Learnado bean' 
+   location='santa, Califonia'
    verifiedBorder={false} 
    image={imagethree} 
    comments={commentsFour} 
    likedByText='Solomon' 
    likedByNumber={898} 
    hours={23}
+   date='31/01/21'
    totalComments={1346}  
    />
 
      <Card 
    accountName='Amor flez' 
+   location='cairo, Egypt'
    verifiedBorder={true} 
    image={imagesix} 
    comments={ commentsSix} 
    likedByText='Solomon' 
    likedByNumber={81} 
-   hours={61} 
+   hours={61}
+   date='17/06/17' 
    totalComments={2} 
    />
 
      <Card 
    accountName='Simon fresh' 
+   location='florida, Kenya'
    verifiedBorder={false} 
    image={imagefour} 
    comments={commentsSix} 
    likedByText='Solomon' 
    likedByNumber={1} 
-   hours={23} 
+   hours={23}
+   date='22/08/19' 
    totalComments={0} 
    />
 
      <Card 
    accountName='Timothy cleev' 
+   location='tiwa, Kigali'
    verifiedBorder={true} 
    image={imageseven} 
    comments={commentsOne} 
    likedByText='Solomon' 
    likedByNumber={67} 
    hours={6} 
+   date='25/09/20'
    totalComments={953} 
    />
 
      <Card 
    accountName='Titus Mira' 
+   location='jerus, Philipines'
    verifiedBorder={false} 
    image={imagetwo} 
    comments={commentsFour} 
    likedByText='Solomon' 
    likedByNumber={19256} 
-   hours={10} 
+   hours={10}
+   date='29/10/18' 
    totalComments={21} 
    />
 

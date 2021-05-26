@@ -1,0 +1,38 @@
+@import './properties';
+
+.bottom_header {
+  position: fixed;
+  bottom: 0.4px;
+  z-index: 2;
+  background-color: $background-grey;
+  color: $icon-color;
+  width: 100vw;
+  border-top: 1px solid $border-color-grey;
+
+  .container {
+    padding: 0.6em 0 0.9em 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 43rem) {
+  .bottom_header {
+    display: none;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .bottom_header {
+    position: fixed;
+    width: 112vw;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .bottom_header {
+    position: fixed;
+    width: 126vw;
+  }
+}

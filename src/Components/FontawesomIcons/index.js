@@ -1,10 +1,14 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEye, faEyeSlash, faUser, faEnvelope, faLock} from '@fortawesome/free-solid-svg-icons'
+import { faEye, faEyeSlash, faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
+import {faCommentAlt as farCommentAlt, faThumbsUp as farThumbsUp, faShareSquare as farShareSquare} from '@fortawesome/free-regular-svg-icons'
 
 library.add(
  faEye, 
  faEyeSlash,
  faUser,
  faEnvelope,
- faLock
+ faLock,
+ farCommentAlt,
+ farThumbsUp,
+ farShareSquare,
  );

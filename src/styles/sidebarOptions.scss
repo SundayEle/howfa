@@ -6,10 +6,11 @@
   cursor: pointer;
   margin-left: 10px;
   margin-top: 5px;
+  color: $icon-color;
+  width: 80%;
 
   &:hover {
     background-color: #ce964d;
-    width: 16em;
     border-radius: 30px;
     color: $font-color-primary;
     transition: color 100ms ease-in;
@@ -17,12 +18,13 @@
 
   > .MuiSvgIcon-root {
     padding: 20px;
-    font-size: 35px i !important;
+    font-size: 20px !important;
   }
 
   > h2 {
     font-weight: 800;
     font-size: 18px;
+    line-height: 20px;
     margin-top: 14px;
     margin-left: -5px;
   }
@@ -30,4 +32,56 @@
 
 .sidebarOptions--active {
   color: $primary-color;
+}
+
+// @media only screen and (max-width: 67.5rem) {
+//   .sidebar {
+//     left: 50vw;
+//   }
+// }
+// @media only screen and (max-width: 64rem) {
+//   .sidebarOptions {
+//     display: none;
+//   }
+// }
+@media only screen and (max-width: 80.5rem) {
+  .sidebarOptions {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 64rem) {
+  .sidebarOptions {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+  .sidebarOptions {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-top: 5px;
+    width: 4em;
+    color: $icon-color;
+
+    &:hover {
+      background-color: #ce964d;
+      border-radius: 50px;
+      color: $font-color-primary;
+      transition: color 100ms ease-in;
+    }
+    > .MuiSvgIcon-root {
+      padding: 20px;
+      font-size: 22px !important;
+    }
+    > h2 {
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 43rem) {
+  .sidebarOptions {
+    display: none;
+  }
 }

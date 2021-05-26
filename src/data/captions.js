@@ -1,9 +1,8 @@
 
-
 const captions = [
  {
    id:1,
-  cardcaption:"The lord has been so good to me, ",
+  cardcaption:"",
 
  },
  {
@@ -30,7 +29,7 @@ const captions = [
  },
  {
    id:6,
-  cardcaption:"Read books to expand your knowledge and be up to date as change is constant in life to keep yourself up to date with the ever changing world!. knowledge and be up to date as change is constant in lif",
+  cardcaption:"",
   
   
  },
@@ -42,7 +41,7 @@ const captions = [
  },
  {
    id:8,
-  cardcaption:"Learning how to code has literally changed the way i think as human being. I can create things that actually works. Learning how to code has literally changed the way i think as human being.",
+  cardcaption:"i am strong and i have the ability to go out there and get what i want",
   
   
  },
@@ -53,7 +52,7 @@ const captions = [
  },
  {
    id:10,
-  cardcaption:"I am articulate, i don't need you to explain me okay. I am articulate, i don't need you to explain me okay. I am articulate, i don't need you to explain me okay. I am articulate, i don't need you to  I am articulate, i don't need you to ",
+  cardcaption:"",
  },
   
 ]

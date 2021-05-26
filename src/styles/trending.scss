@@ -1,9 +1,11 @@
 @import './properties';
 
 .trending {
+  position: relative;
+  left: -58%;
   margin-top: 5em;
-  width: 20em;
-  height: 25em;
+  width: 22vw;
+  height: 30.2em;
   border-radius: 25px;
   background-color: $background-grey;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 7px 0px;
@@ -13,12 +15,12 @@
     h2 {
       position: relative;
       top: 1em;
-      left: 4.5em;
+      left: 3.6em;
     }
     .MuiSvgIcon-root {
       position: relative;
       top: -1.5em;
-      left: 14em;
+      left: 13em;
       margin-left: 14px;
       margin-bottom: -0.8em;
       font-size: 18px;
@@ -32,5 +34,55 @@
         cursor: pointer;
       }
     }
+  }
+  button {
+    position: relative;
+    top: 1.3em;
+    left: 8.6em;
+    width: 7em;
+    border: none;
+    border-radius: 14px;
+    background-color: $background-grey;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 7px 0px;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-width: 80.5rem) {
+  .trending {
+    left: -48%;
+
+    header {
+      h2 {
+        position: relative;
+        top: 1em;
+        left: 3.2em;
+      }
+      .MuiSvgIcon-root {
+        position: relative;
+        top: -1.5em;
+        left: 11.5em;
+        margin-left: 14px;
+        margin-bottom: -0.8em;
+        font-size: 18px;
+        padding: 10px;
+        color: $icon-color;
+      }
+    }
+    button {
+      position: relative;
+      top: 1.3em;
+      left: 7em;
+      width: 6em;
+    }
+  }
+}
+@media only screen and (max-width: 73.5rem) {
+  .trending {
+    display: none;
   }
 }

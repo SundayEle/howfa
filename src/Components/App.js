@@ -2,6 +2,7 @@ import '../styles/App.scss';
 import '../Components/FontawesomIcons';
 import Login from './Login'
 import Header from './Header'
+import BottomHeader from './BottomHeader'
 import PostBox from './PostBox'
 import Cards from './Cards'
 import Sidebar from './Sidebar'
@@ -18,11 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      {user 
+      {/* {user 
       ?
-      <>
+      <> */}
       <Header />
-      <Logout />
+      <BottomHeader />
+      {/* <Logout /> */}
       <main>
         <div className="container">
           <PostBox />
@@ -31,10 +33,10 @@ function App() {
           <Sidebar />
         </div>
       </main>
-       </>
+       {/* </>
        :
       <Login /> 
-       }
+       } */}
     </div>
   );
 }

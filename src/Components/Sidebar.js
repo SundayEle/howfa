@@ -10,13 +10,15 @@ import BookmarksOutlinedIcon from '@material-ui/icons/BookmarksOutlined';
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
 import Footer from './Footer'
 
+
 function Sidebar() {
+
  return (
   <div className='sidebar'>
 
    <SidebarOptions active  Icon={HomeIcon} text='Home'/>
 
-   <SidebarOptions  Icon={NotificationsOutlinedIcon} text='Notifications'/>
+   <SidebarOptions  Icon={NotificationsOutlinedIcon} text='Notification'/>
 
    <SidebarOptions Icon={MailOutlineOutlinedIcon} text='Message'/>
 
@@ -25,8 +27,8 @@ function Sidebar() {
    <SidebarOptions Icon={NearMeOutlinedIcon} text='Explore'/>
 
    <SidebarOptions Icon={BookmarksOutlinedIcon} text='Saved'/>
-
-   <SidebarOptions  Icon={MoreHorizOutlinedIcon} text='More'/>
+  
+    <SidebarOptions  Icon={MoreHorizOutlinedIcon} text='More'/>
 
    <Footer />
   </div>

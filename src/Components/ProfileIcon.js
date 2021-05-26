@@ -3,7 +3,7 @@ import React from 'react'
 
 function ProfileIcon(props) {
 
- const {iconSize, verifiedBorder, image} =props;
+ const {iconSize, verifiedBorder, image, color} =props;
 
  function getRandomInt(min, max) {
   min = Math.ceil(min); 
@@ -20,6 +20,7 @@ function ProfileIcon(props) {
  return (
   <div className={verifiedBorder ? 'verifiedBorder' : ''}>
 <img className={`profileIcon ${iconSize}`} src={profileImage} alt="profile"/>
+  <span className="color"></span>
   </div>
  )
 }

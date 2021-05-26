@@ -12,8 +12,8 @@ function SecondSidebar() {
    <StickyBox>
         <Empty />
         <SidebarProfile />
-        <Trending />
         <JoinOthers />
+         <Trending />
         <Empty />
    </StickyBox>
   </div>

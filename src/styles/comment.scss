@@ -19,8 +19,25 @@
   }
 
   .comment {
-    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
     margin-top: 0.65em;
     margin-left: 0.5em;
+  }
+  .commentTime {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 11px;
+    color: $font-color-secondary;
+    margin-top: 0.9em;
+    margin-left: 0.5em;
+  }
+}
+@media only screen and (max-width: 43rem) {
+  .commentsContainer {
+    .comment {
+      font-size: 12px;
+    }
   }
 }

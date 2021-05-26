@@ -1,1 +1,24 @@
 @import './properties';
+.sidebarprofileoptions {
+  position: relative;
+  top: 8.5em;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: -12px;
+
+  > .MuiSvgIcon-root {
+    color: $icon-color;
+    padding: 8px;
+    font-size: 30px i !important;
+  }
+
+  > h2 {
+    color: $font-color-primary;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 14px;
+    margin-left: 3px;
+  }
+}

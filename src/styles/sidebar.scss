@@ -3,10 +3,36 @@
 .sidebar {
   position: fixed;
   top: 3.6em;
-  left: 64.3em;
+  left: 78vw;
   min-width: 20em;
   height: 100%;
   flex: 0.3;
   background-color: $background-grey;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+@media only screen and (max-width: 73.5rem) {
+  .sidebar {
+    left: 70vw;
+  }
+}
+
+@media only screen and (max-width: 67.5rem) {
+  .sidebar {
+    left: 71vw;
+  }
+}
+@media only screen and (max-width: 64rem) {
+  .sidebar {
+    left: 71vw;
+  }
+}
+@media only screen and (max-width: 48rem) {
+  .sidebar {
+    left: 80vw;
+  }
+}
+@media only screen and (max-width: 43rem) {
+  .sidebar {
+    display: none;
+  }
 }

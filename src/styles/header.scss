@@ -2,11 +2,10 @@
 
 .header {
   position: fixed;
-  top: 0;
+  top: 0.1px;
   z-index: 2;
   background-color: $background-grey;
-  width: 100%;
-  height: 8.5%;
+  width: 100vw;
   border-bottom: 1px solid $border-color-grey;
 
   .container {
@@ -17,44 +16,158 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  .search_box {
+    position: absolute;
+    top: 0.3em;
+    left: 7%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: $background-white;
+    border-radius: 200px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search_box:hover > .search_txt {
+    width: 230px;
+    padding: 0px;
+  }
+
+  .search_box:hover > .search_btn {
+    background: $primary-color;
+    color: $background-white;
+    border: none;
+  }
+
+  .search_btn {
+    color: $icon-color;
+    float: right;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    display: flex;
+    background: $background-white;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+  }
+  .search_btn .search {
+    font-size: 1rem;
+  }
+  .search_txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: #262626;
+    padding: 0;
+    font-size: 13px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 0px;
+  }
+  .profile_icon {
+    position: relative;
+    top: 0.2em;
+    left: 85vw;
+  }
   .logo {
+    position: absolute;
+    top: 1.7em;
+    transform: translate(-50%, -50%);
+    left: 50%;
     padding: 0 1em;
     width: 100px;
     height: 40px;
-    margin-top: -0.1em;
 
     &:hover {
       cursor: pointer;
     }
   }
-
-  .search {
-    position: absolute;
-    top: 1.8em;
-    left: 53%;
-    transform: translate(-50%, -50%);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 25px;
-    background-color: $background-white;
-    min-width: 390px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .searchIcon {
-      width: 21px;
-      font-size: 25px;
-      opacity: 0.4;
-      margin-left: 0;
-      cursor: pointer;
+}
+@media only screen and (max-width: 73.5rem) {
+  .header {
+    .search_box:hover > .search_txt {
+      width: 200px;
     }
-    > input {
-      border: none;
-      font-size: 16px;
-      background-color: transparent;
-      outline: 0;
-      width: 19em;
-      height: 2em;
+  }
+}
+
+@media only screen and (max-width: 67.5rem) {
+  .header {
+    .search_box:hover > .search_txt {
+      width: 200px;
+    }
+  }
+}
+@media only screen and (max-width: 64rem) {
+  .header {
+    .search_box:hover > .search_txt {
+      width: 200px;
+    }
+  }
+}
+@media only screen and (max-width: 48rem) {
+  .header {
+    .search_box:hover > .search_txt {
+      width: 150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 43rem) {
+  .header {
+    position: fixed;
+    .search_box:hover > .search_txt {
+      width: 80px;
+    }
+    .logo {
+      padding: 0 1em;
+      max-width: 60px;
+      height: 30px;
+      margin-top: -0.1em;
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .header {
+    position: fixed;
+    .search_box:hover > .search_txt {
+      width: 70px;
+    }
+    .logo {
+      padding: 0 1em;
+      max-width: 60px;
+      height: 30px;
+      margin-top: -0.1em;
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  .header {
+    position: fixed;
+    width: 112vw;
+
+    .search_box:hover > .search_txt {
+      width: 70px;
+    }
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .header {
+    position: fixed;
+    width: 126vw;
+
+    .search_box:hover > .search_txt {
+      width: 50px;
+    }
+    .logo {
+      padding: 0 1em;
+      max-width: 60px;
+      height: 30px;
+      margin-top: -0.1em;
     }
   }
 }

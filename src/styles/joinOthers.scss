@@ -1,9 +1,10 @@
 @import './properties';
-
 .joinothers {
-  width: 20em;
-  height: 28em;
+  position: relative;
+  left: -59%;
+  width: 23vw;
   margin-top: 5em;
+  height: 33em;
   border-radius: 25px;
   background-color: $background-grey;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 7px 0px;
@@ -13,13 +14,13 @@
     h2 {
       position: relative;
       top: 1em;
-      left: 4em;
+      left: 3em;
     }
 
     .MuiSvgIcon-root {
       position: relative;
       top: -1.5em;
-      left: 14em;
+      left: 12.5em;
       margin-left: 14px;
       margin-bottom: -0.8em;
       font-size: 18px;
@@ -33,5 +34,113 @@
         cursor: pointer;
       }
     }
+  }
+
+  .profileicon_and_accountname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    padding-left: 1em;
+    margin-top: 5px;
+    border-bottom: 1px solid $icon-background-color;
+  }
+  .cardLocation {
+    display: none;
+  }
+
+  .btn {
+    position: relative;
+    top: -23em;
+    left: 12.5em;
+    width: 4.5em;
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    margin: 31px;
+    font-size: 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: #886c6cb7;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    &:hover {
+      background-color: $primary-color;
+      transition: color 100ms ease-in;
+      cursor: pointer;
+    }
+  }
+
+  .see_more_btn {
+    position: relative;
+    top: -25em;
+    left: 6.9em;
+    width: 11em;
+    padding: 10px;
+    margin-bottom: 2em;
+    font-weight: 600;
+    font-size: 13px;
+    border: none;
+    border-radius: 13px;
+    background-color: $background-grey;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 12px;
+    transition: color 100ms ease-in;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+      transition: color 100ms ease-in;
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-width: 80.5rem) {
+  .joinothers {
+    left: -49.5%;
+
+    header {
+      border-bottom: 1px solid $border-color-grey;
+      h2 {
+        position: relative;
+        top: 1em;
+        left: 2.6em;
+      }
+
+      .MuiSvgIcon-root {
+        position: relative;
+        top: -1.5em;
+        left: 11.6em;
+        margin-left: 14px;
+        margin-bottom: -0.8em;
+        font-size: 18px;
+        padding: 10px;
+        color: $icon-color;
+      }
+    }
+    .btn {
+      position: relative;
+      top: -24.9em;
+      left: 11.7em;
+      width: 3.8em;
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+      margin: 32px;
+    }
+    .see_more_btn {
+      position: relative;
+      top: -28em;
+      left: 6em;
+      width: 10em;
+      padding: 10px;
+      margin-bottom: 2em;
+    }
+  }
+}
+@media only screen and (max-width: 73.5rem) {
+  .joinothers {
+    display: none;
   }
 }
