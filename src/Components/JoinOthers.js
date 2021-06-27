@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/joinOthers.scss'
-import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
+import EditIcon from '@material-ui/icons/Edit';
 import Profile from './Profile'
 
 
@@ -14,7 +14,7 @@ function JoinOthers(props) {
     
    <header>
      <h2>Join Others</h2>
-      <SettingsOutlinedIcon />
+      <EditIcon />
    </header>
 
     <div className="joinothers-body">

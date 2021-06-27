@@ -49,7 +49,7 @@ const handleHistory = () => {
     <div className="container">
       <img className='logo' src={logo} alt="howfa logo"/>
       <Route path="/form" component={Form} />
-      <button onClick={handleHistory}>
+      <button onClick={handleHistory} className="createAccbtn">
         Create account
       </button>
     </div>

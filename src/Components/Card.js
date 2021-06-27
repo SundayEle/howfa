@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import '../styles/card.scss'
 import Profile from './Profile'
 import captions from '../data/captions'
 import commentss from '../data/commentss'
-import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
+import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import MessageOutlinedIcon from '@material-ui/icons/MessageOutlined';
 import CardMenu from './CardMenu'
 import Comment from './Comment'
@@ -15,6 +15,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
   },
 }));
+
+
+
 
 
 function Card(props) {
@@ -64,6 +68,7 @@ function Card(props) {
   const {
         verifiedBorder,
         image,
+        video,
         comments,
         date,
         hours,
@@ -124,7 +129,7 @@ function  SeeMore() {
         <div className='card'>  
         <header>
             <Profile iconSize='medium' verifiedBorder={verifiedBorder} hideLocation={false}/>
-           <div className="cardButton"><MoreHorizOutlinedIcon /> </div>
+           <div className="cardButton"><MoreVertOutlinedIcon /> </div>
         </header>
         <div className="cation">
              {(caption) && !hideCaption && (
@@ -133,15 +138,15 @@ function  SeeMore() {
               </div>
             )}
         </div>
-        <img className='cardImage' src={image} alt="card content"/>
+        <img className='cardImage' src={image || video} alt=""/>
         <CardMenu />
         <div className="likedBy">
           <div className="groupAvatar">
-            <Profile iconSize='small' verifiedBorder={false} hideLocation={true}/>
-            <Profile iconSize='small' verifiedBorder={false} hideLocation={true}/>
-            <Profile iconSize='small' verifiedBorder={false} hideLocation={true}/>
+            <Profile iconSize='small' verifiedBorder={false} hideLocation={true} />
+            <Profile iconSize='small' verifiedBorder={false} hideLocation={true} />
+            <Profile iconSize='small' verifiedBorder={false} hideLocation={true} />
           </div>
-            <span>
+            <span className='number_of_likes'>
                  And <strong>  {likedByNumber} others..</strong>
             </span>
             <div className="timePosted">
@@ -190,10 +195,12 @@ function  SeeMore() {
     </React.Fragment>
 
       <div className="cardMenu">
-            <FontAwesomeIcon className='fontawesomeicon' icon={[ "far","thumbs-up"]} onClick= {() =>
+
+             <FontAwesomeIcon className='fontawesomeicon' icon={[ "far","thumbs-up"]} onClick= {() =>
             increaseLikes(likedByNumber + 1 ) } />
             <FontAwesomeIcon className='fontawesomeicon' icon={["far","comment-alt"]} onClick={handleClickOpen} />
             <FontAwesomeIcon className='fontawesomeicon' icon={["far","share-square"]} />
+            <FontAwesomeIcon className='fontawesomeicon' icon={["far", "bookmark"]} />  
         </div>
 
     

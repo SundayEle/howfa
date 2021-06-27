@@ -13,105 +13,115 @@
     display: flex;
     align-content: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-  }
 
-  .search_box {
-    position: absolute;
-    top: 0.3em;
-    left: 7%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: $background-white;
-    border-radius: 200px;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .search_box:hover > .search_txt {
-    width: 230px;
-    padding: 0px;
-  }
+    .search_box {
+      position: absolute;
+      top: 0.4em;
+      left: 5%;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      background-color: $background-white;
+      border-radius: 200px;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .search_box:hover > .search_txt {
+      width: 230px;
+      padding: 0px;
+    }
 
-  .search_box:hover > .search_btn {
-    background: $primary-color;
-    color: $background-white;
-    border: none;
-  }
-
-  .search_btn {
-    color: $icon-color;
-    float: right;
-    width: 32px;
-    height: 32px;
-    border-radius: 50px;
-    display: flex;
-    background: $background-white;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-  }
-  .search_btn .search {
-    font-size: 1rem;
-  }
-  .search_txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    color: #262626;
-    padding: 0;
-    font-size: 13px;
-    transition: 0.4s;
-    line-height: 30px;
-    width: 0px;
-  }
-  .profile_icon {
-    position: relative;
-    top: 0.2em;
-    left: 85vw;
-  }
-  .logo {
-    position: absolute;
-    top: 1.7em;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    padding: 0 1em;
-    width: 100px;
-    height: 40px;
-
-    &:hover {
+    .search_box:hover > .search_btn {
+      background: $primary-color;
+      color: $background-white;
       cursor: pointer;
+      border: none;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .search_btn {
+      color: $icon-color;
+      float: right;
+      width: 30px;
+      height: 30px;
+      border-radius: 100px;
+      display: flex;
+      background: $background-white;
+      justify-content: center;
+      align-items: center;
+      transition: 0.4s;
+    }
+    .search_btn .search {
+      font-size: 1rem;
+    }
+    .search_txt {
+      border: none;
+      background: none;
+      outline: none;
+      float: left;
+      color: #262626;
+      padding: 0;
+      font-size: 15px;
+      transition: 0.4s;
+      line-height: 30px;
+      width: 0px;
+    }
+    .profile_icon {
+      position: relative;
+      top: 0.2em;
+      left: 42vw;
+    }
+    .logo {
+      position: absolute;
+      top: 1.7em;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      padding: 0 1em;
+      width: 100px;
+      height: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
 @media only screen and (max-width: 73.5rem) {
   .header {
-    .search_box:hover > .search_txt {
-      width: 200px;
+    .container {
+      .search_box:hover > .search_txt {
+        width: 200px;
+      }
     }
   }
 }
 
 @media only screen and (max-width: 67.5rem) {
   .header {
-    .search_box:hover > .search_txt {
-      width: 200px;
+    .container {
+      .search_box:hover > .search_txt {
+        width: 200px;
+      }
     }
   }
 }
 @media only screen and (max-width: 64rem) {
   .header {
-    .search_box:hover > .search_txt {
-      width: 200px;
+    .container {
+      .search_box:hover > .search_txt {
+        width: 200px;
+      }
     }
   }
 }
 @media only screen and (max-width: 48rem) {
   .header {
-    .search_box:hover > .search_txt {
-      width: 150px;
+    .container {
+      .search_box:hover > .search_txt {
+        width: 150px;
+      }
     }
   }
 }
@@ -119,28 +129,49 @@
 @media only screen and (max-width: 43rem) {
   .header {
     position: fixed;
-    .search_box:hover > .search_txt {
-      width: 80px;
-    }
-    .logo {
-      padding: 0 1em;
-      max-width: 60px;
-      height: 30px;
-      margin-top: -0.1em;
+    .container {
+      .search_box:hover > .search_txt {
+        width: 120px;
+      }
+      .search_txt {
+        font-size: 13px;
+      }
+      .logo {
+        padding: 0 1em;
+        max-width: 60px;
+        height: 30px;
+        margin-top: -0.1em;
+      }
     }
   }
 }
+@media only screen and (max-width: 40rem) {
+  .header {
+    position: fixed;
+    .container {
+      .search_box:hover > .search_txt {
+        width: 100px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 375px) {
   .header {
     position: fixed;
-    .search_box:hover > .search_txt {
-      width: 70px;
-    }
-    .logo {
-      padding: 0 1em;
-      max-width: 60px;
-      height: 30px;
-      margin-top: -0.1em;
+    .container {
+      .search_box:hover > .search_txt {
+        width: 70px;
+      }
+      .search_txt {
+        font-size: 9px;
+      }
+      .logo {
+        padding: 0 1em;
+        max-width: 60px;
+        height: 30px;
+        margin-top: -0.1em;
+      }
     }
   }
 }
@@ -148,9 +179,13 @@
   .header {
     position: fixed;
     width: 112vw;
-
-    .search_box:hover > .search_txt {
-      width: 70px;
+    .container {
+      .search_box:hover > .search_txt {
+        width: 60px;
+      }
+      .search_txt {
+        font-size: 9px;
+      }
     }
   }
 }
@@ -158,16 +193,29 @@
 @media only screen and (max-width: 280px) {
   .header {
     position: fixed;
-    width: 126vw;
-
-    .search_box:hover > .search_txt {
-      width: 50px;
-    }
-    .logo {
-      padding: 0 1em;
-      max-width: 60px;
-      height: 30px;
-      margin-top: -0.1em;
+    width: 112vw;
+    .container {
+      .search_box {
+        display: none;
+      }
+      .search_box:hover > .search_txt {
+        width: 50px;
+      }
+      .search_txt {
+        font-size: 7px;
+      }
+      .profile_icon {
+        position: relative;
+        top: 0.2em;
+        left: 40%;
+      }
+      .logo {
+        left: 20%;
+        padding: 0 1em;
+        max-width: 60px;
+        height: 30px;
+        margin-top: -0.1em;
+      }
     }
   }
 }

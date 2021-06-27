@@ -2,14 +2,8 @@
 
 .header {
   .container {
-    .logo {
-      padding: 0 1em;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    button {
+    max-width: 1400px;
+    .createAccbtn {
       margin-right: 5em;
       width: 150px;
       padding: 5px;
@@ -75,7 +69,7 @@
       }
       .sideInputContainer {
         position: absolute;
-        top: 8.55em;
+        top: 8.5em;
         left: -4em;
         border: none;
         font-size: 15px;
@@ -92,7 +86,7 @@
 
       .sidepasswordcontainer {
         position: absolute;
-        top: 12.7em;
+        top: 12.6em;
         left: -4em;
         border: none;
         font-size: 15px;

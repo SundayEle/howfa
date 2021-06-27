@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import useForm from '../hooks/useForm'
+import logo from '../images/HOWFA.png';
 import usePasswordToggle from "../hooks/usePasswordToggle";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Checkbox from '@material-ui/core/Checkbox';
@@ -32,17 +33,19 @@ const handleHistory = () => {
   <div className='createaccount'>
    <div className="header">
     <div className="container">
+      <img className='logo' src={logo} alt="howfa logo"/>
         <Route path="/login" component={Login} />
       <button onClick={handleHistory}>
        Login
       </button>
     </div>
   
-    <div className="ssvg"></div>
-     <div className="createaccountContainer">
+
+     <form className="createaccount_form" onSubmit={handleSubmit}>
+  
        <h2>Create account</h2>
        <h5>very easy and fast</h5>
-      <form className="form" onSubmit={handleSubmit}>
+      
 
         <div className='form_inputs'>
         <input 
@@ -50,7 +53,7 @@ const handleHistory = () => {
         type="text" 
         name='username'
         className='form_input' 
-        placeholder='Username' 
+        placeholder='Create a username' 
         value={values.username}
         onChange={handleChange}
         />
@@ -63,7 +66,7 @@ const handleHistory = () => {
          type="email" 
          name='email' 
          className='form_input'
-         placeholder='Email' 
+         placeholder='Enter our Email' 
          value={values.email}
          onChange={handleChange}
         />
@@ -76,7 +79,7 @@ const handleHistory = () => {
          type={PasswordInputType}
          name='password'  
          className='form_input' 
-         placeholder='Password' 
+         placeholder='Create Password' 
          value={values.password}
          onChange={handleChange}
          />
@@ -129,7 +132,6 @@ const handleHistory = () => {
           </div>
 
    </form>
-   </div>
    </div>
   </div>
  );

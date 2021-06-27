@@ -1,15 +1,9 @@
-import '../styles/App.scss';
-import '../Components/FontawesomIcons';
-import Login from './Login'
-import Header from './Header'
-import BottomHeader from './BottomHeader'
-import PostBox from './PostBox'
-import Cards from './Cards'
-import Sidebar from './Sidebar'
-import SecondSidebar from './SecondSidebar'
-import Logout from './Logout' 
-import { selectUser } from '../features/userSlice';
-import { useSelector } from 'react-redux'
+import "../styles/App.scss";
+import "../Components/FontawesomIcons";
+import Home from '../pages/Home'
+import Login from "./Login"
+import { selectUser } from "../features/userSlice";
+import { useSelector } from "react-redux"
 
 
 
@@ -19,24 +13,14 @@ function App() {
 
   return (
     <div className="App">
-      {/* {user 
-      ?
-      <> */}
-      <Header />
-      <BottomHeader />
-      {/* <Logout /> */}
-      <main>
-        <div className="container">
-          <PostBox />
-          <SecondSidebar/>
-          <Cards />
-          <Sidebar />
-        </div>
-      </main>
-       {/* </>
-       :
-      <Login /> 
-       } */}
+        {user 
+      ? 
+      <Home />
+        : 
+      <Login />  
+        
+      }
+  
     </div>
   );
 }

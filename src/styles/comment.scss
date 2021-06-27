@@ -7,7 +7,7 @@
   margin-bottom: 0.4em;
 
   .accountName {
-    margin-top: 0.8em;
+    margin-top: 0.3em;
     margin-left: 0.2em;
     font-weight: 700;
     font-size: 12px;
@@ -30,7 +30,7 @@
     flex-wrap: wrap;
     font-size: 11px;
     color: $font-color-secondary;
-    margin-top: 0.9em;
+    margin-top: 0.3em;
     margin-left: 0.5em;
   }
 }
@@ -38,6 +38,7 @@
   .commentsContainer {
     .comment {
       font-size: 12px;
+      line-height: 20px;
     }
   }
 }

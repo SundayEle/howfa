@@ -1,0 +1,16 @@
+@import './properties';
+
+.groups_options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 10em;
+  }
+}

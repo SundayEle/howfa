@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/trending.scss'
 import TrendingOptions from './TrendingOptions'
-import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
+import EditIcon from '@material-ui/icons/Edit';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
@@ -12,7 +12,7 @@ function Trending() {
    
    <header>
     <h2>Trending</h2>
-     <SettingsOutlinedIcon />
+     <EditIcon />
    </header>
    <div className="info">
       <TrendingOptions Icon={WhatshotIcon} text='#OlamideNeedsToFree'/>

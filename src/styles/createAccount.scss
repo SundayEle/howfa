@@ -1,14 +1,19 @@
 @import './properties';
 
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
   .container {
     display: flex;
     align-content: center;
     justify-content: space-around;
 
     button {
-      margin-left: 48em;
-      width: 150px;
+      margin-left: 40em;
+      width: 120px;
       padding: 5px;
       height: 35px;
       cursor: pointer;
@@ -29,20 +34,20 @@
     }
   }
 
-  .createaccountContainer {
+  .createaccount_form {
     position: absolute;
-    left: 24.5em;
-    top: -9.5em;
+    left: 50%;
+    top: -10em;
     transform: translate(-50%, 50%);
     min-width: 27em;
-    min-height: 30em;
+    height: 32em;
     border-radius: 20px;
     background-color: $background-grey;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
     h2 {
       position: absolute;
-      top: -0.7%;
+      top: -2.7%;
       left: 50%;
       display: flex;
       justify-content: center;
@@ -54,7 +59,7 @@
     }
     h5 {
       position: absolute;
-      top: 6.5%;
+      top: 3%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: flex;
@@ -65,162 +70,166 @@
       color: $primary-color;
     }
 
-    .form {
+    .form_inputs {
       display: flex;
       flex-direction: column;
-      padding: 1em;
-      margin-top: 3.8em;
-
-      .form_inputs {
-        margin-bottom: 0.8em;
-
-        p {
-          color: red;
-        }
-        .usererror {
-          position: absolute;
-          top: 9.65em;
-          left: 5.5em;
-          font-size: 13px;
-        }
-        .emailerror {
-          position: absolute;
-          top: 15.6em;
-          left: 5.5em;
-          font-size: 13px;
-        }
-
-        .passerror {
-          position: absolute;
-          top: 21.2em;
-          left: 5.5em;
-          font-size: 13px;
-        }
-
-        .passserror {
-          position: absolute;
-          top: 26.9em;
-          left: 5.5em;
-          font-size: 13px;
-        }
-      }
+      padding-top: 2.5em;
+      margin-top: 2em;
 
       .form_input {
         outline-color: $primary-color;
         border: none;
         font-size: 15px;
         padding: 1em;
-        margin: 0.5em;
-        width: 21em;
-        margin-left: 3.8em;
+        margin: -1em;
+        width: 20em;
+        margin-left: 4.7em;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         background-color: $background-white;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       }
-      .sideInputContainer {
-        position: absolute;
-        top: 5.1em;
-        left: -4em;
-        border: none;
-        font-size: 15px;
-        padding: 1em;
-        margin: 0.5em;
-        width: 15px;
-        height: 17px;
-        margin-left: 5.8em;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        background-color: $background-grey;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+      p {
+        color: red;
       }
-      .se-sideInputContainer {
+      .usererror {
         position: absolute;
-        top: 10.1em;
-        left: -4em;
-        border: none;
-        font-size: 15px;
-        padding: 1em;
-        margin: 0.5em;
-        width: 15px;
-        height: 17px;
-        margin-left: 5.8em;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        background-color: $background-grey;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        top: 7.2em;
+        left: 5em;
+        font-size: 13px;
       }
-      .th-sideInputContainer {
+      .emailerror {
         position: absolute;
-        top: 15.1em;
-        left: -4em;
-        border: none;
-        font-size: 15px;
-        padding: 1em;
-        margin: 0.5em;
-        width: 15px;
-        height: 17px;
-        margin-left: 5.8em;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        background-color: $background-grey;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-      }
-      .ft-sideInputContainer {
-        position: absolute;
-        top: 20.1em;
-        left: -4em;
-        border: none;
-        font-size: 15px;
-        padding: 1em;
-        margin: 0.5em;
-        width: 15px;
-        height: 17px;
-        margin-left: 5.8em;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        background-color: $background-grey;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        top: 14.2em;
+        left: 5em;
+        font-size: 13px;
       }
 
-      .password-togle-icon {
+      .passerror {
         position: absolute;
-        top: 15.5em;
-        right: 2.5em;
-        z-index: 1000;
-        cursor: pointer;
+        top: 21em;
+        left: 5em;
+        font-size: 13px;
       }
-      .confirm-password-toogle-icon {
-        position: absolute;
-        top: 20em;
-        right: 2.5em;
-        z-index: 1000;
-        cursor: pointer;
-      }
-      button {
-        padding: 1em;
-        margin: 0.5em;
-        width: 23em;
-        height: 3em;
-        border-radius: 10px;
-        background-color: $primary-color;
-        color: $background-white;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        border: none;
-        outline: none;
-        font-size: 17px;
-        font-weight: 700;
 
-        &:hover {
-          background-color: #9c5d09;
-          transition: color 100ms ease-in;
-          cursor: pointer;
-        }
+      .passserror {
+        position: absolute;
+        top: 27.5em;
+        left: 5em;
+        font-size: 13px;
       }
     }
+
+    .sideInputContainer {
+      position: absolute;
+      top: 3.3em;
+      left: -4.2em;
+      border: none;
+      font-size: 15px;
+      padding: 1em;
+      margin: 0.5em;
+      width: 15px;
+      height: 17px;
+      margin-left: 5.8em;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background-color: $background-grey;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    .se-sideInputContainer {
+      position: absolute;
+      top: 9.2em;
+      left: -4.2em;
+      border: none;
+      font-size: 15px;
+      padding: 1em;
+      margin: 0.5em;
+      width: 15px;
+      height: 17px;
+      margin-left: 5.8em;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background-color: $background-grey;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    .th-sideInputContainer {
+      position: absolute;
+      top: 15.15em;
+      left: -4.2em;
+      border: none;
+      font-size: 15px;
+      padding: 1em;
+      margin: 0.5em;
+      width: 15px;
+      height: 17px;
+      margin-left: 5.8em;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background-color: $background-grey;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    .ft-sideInputContainer {
+      position: absolute;
+      top: 21.1em;
+      left: -4.2em;
+      border: none;
+      font-size: 15px;
+      padding: 1em;
+      margin: 0.5em;
+      width: 15px;
+      height: 17px;
+      margin-left: 5.8em;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background-color: $background-grey;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .password-togle-icon {
+      position: absolute;
+      top: 15.5em;
+      right: 2.5em;
+      z-index: 1000;
+      cursor: pointer;
+    }
+    .confirm-password-toogle-icon {
+      position: absolute;
+      top: 21em;
+      right: 2.5em;
+      z-index: 1000;
+      cursor: pointer;
+    }
+    button {
+      padding: 0.8em;
+      margin: 0.5em;
+      width: 22em;
+      height: 2.8em;
+      margin-top: 2.5em;
+      margin-left: 1.8em;
+      border-radius: 10px;
+      background-color: $primary-color;
+      color: $background-white;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      border: none;
+      outline: none;
+      font-size: 17px;
+      font-weight: 700;
+
+      &:hover {
+        background-color: #9c5d09;
+        transition: color 100ms ease-in;
+        cursor: pointer;
+      }
+    }
+
+    .cbox {
+      margin-left: 1em;
+    }
+
     h6 {
       position: absolute;
-      top: 39.8em;
+      top: 41em;
       left: 5.2em;
       color: $icon-color;
     }

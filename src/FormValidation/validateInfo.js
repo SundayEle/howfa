@@ -29,7 +29,7 @@ export default function validateInfo(values) {
   }
 
   if (!values.password2) {
-    errors.password2 = 'Confirm password';
+    errors.password2 = 'Please Confirm password';
   } else if (values.password2 !== values.password) {
     errors.password2 = 'Password do not match!';
   }

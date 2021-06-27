@@ -11,6 +11,7 @@ import imageseven from '../images/sun7.jpg'
 import imageeight from '../images/sun8.jpg'
 import imagenine from '../images/sun9.jpg'
 import imageten from '../images/sun10.jpg'
+import videoOne from '../videos/vid1.mp4'
 
 function Cards() {
 
@@ -159,7 +160,7 @@ const commentsSix = [
    accountName='Isaac nice' 
    location='Enugu, Nigeria'
    verifiedBorder={true} 
-   image={imageone} 
+   video={videoOne} 
    comments={ commentsTwo} 
    likedByText='Solomon' 
    likedByNumber={8} 
@@ -185,7 +186,7 @@ const commentsSix = [
    accountName='Learnado bean' 
    location='monica, Las Vegas'
    verifiedBorder={true} 
-   image={imagenine} 
+   image='null' 
    comments={commentsSeven} 
    likedByText='Solomon' 
    likedByNumber={1000000} 
@@ -198,7 +199,7 @@ const commentsSix = [
    accountName='Learnado bean' 
    location='santa, Califonia'
    verifiedBorder={false} 
-   image={imagethree} 
+   video={videoOne}  
    comments={commentsFour} 
    likedByText='Solomon' 
    likedByNumber={898} 
@@ -224,7 +225,7 @@ const commentsSix = [
    accountName='Simon fresh' 
    location='florida, Kenya'
    verifiedBorder={false} 
-   image={imagefour} 
+   image='null'
    comments={commentsSix} 
    likedByText='Solomon' 
    likedByNumber={1} 
@@ -250,7 +251,7 @@ const commentsSix = [
    accountName='Titus Mira' 
    location='jerus, Philipines'
    verifiedBorder={false} 
-   image={imagetwo} 
+   video={videoOne}  
    comments={commentsFour} 
    likedByText='Solomon' 
    likedByNumber={19256} 

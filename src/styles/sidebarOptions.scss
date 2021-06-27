@@ -7,7 +7,7 @@
   margin-left: 10px;
   margin-top: 5px;
   color: $icon-color;
-  width: 80%;
+  width: 12%;
 
   &:hover {
     background-color: #ce964d;
@@ -46,12 +46,12 @@
 // }
 @media only screen and (max-width: 80.5rem) {
   .sidebarOptions {
-    width: 70%;
+    width: 13%;
   }
 }
 @media only screen and (max-width: 64rem) {
   .sidebarOptions {
-    width: 60%;
+    width: 12%;
   }
 }
 
@@ -62,7 +62,7 @@
     cursor: pointer;
     margin-left: 25px;
     margin-top: 5px;
-    width: 4em;
+    width: 4.3em;
     color: $icon-color;
 
     &:hover {

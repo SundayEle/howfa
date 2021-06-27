@@ -9,7 +9,7 @@
 
 .profileIcon {
   border-radius: 50%;
-  border: 2px solid $background-white;
+  border: 2.5px solid $background-white;
   display: block;
 
   &:hover {
@@ -17,8 +17,8 @@
   }
 
   &.small {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
 
   &.medium {
@@ -27,8 +27,8 @@
   }
 
   &.big {
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
   }
 }
 .color {

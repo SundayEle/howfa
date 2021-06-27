@@ -32,7 +32,7 @@ function SidebarProfile(props) {
 
    <div className="info">
     
-   <SidebarProfileOptions Icon={ CalendarTodayIcon } text='Joined December 2018'/>
+   {/* <SidebarProfileOptions Icon={ CalendarTodayIcon } text='Joined December 2018'/> */}
 
    <SidebarProfileOptions Icon={LocationOnIcon} text='Lagos, Nigeria'/>
 
